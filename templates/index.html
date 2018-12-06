@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SVHN Model as a Flash API</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename="style.css") }}">
+</head>
+<body>
+    <h1>Google Street View House Number Predictor</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" value="Upload">
+        <input type="submit" value="Predict"> 
+        {% if label %} {{ label }} {%  endif %} 
+    </form>
+</body>
+</html>
